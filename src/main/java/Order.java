@@ -12,8 +12,8 @@ public class Order {
     public double getDimension(){return dimension;}
     public double getWeight(){return weight;}
 
-    public double getTotalCost(CostCalculator costCalculator, IShippingMethod shippingMethod)
+    public double getTotalCost(IShippingCostCalculator costCalculator)
     {
-        return productsCost + costCalculator.calculateCost(this, shippingMethod);
+        return productsCost + costCalculator.getCost(this);
     }
 }

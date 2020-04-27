@@ -4,8 +4,8 @@ public class Main {
         CostCalculator costCalculator = new CostCalculator();
 
         System.out.println(costCalculator.calculateCost(order, IShippingMethod.FanCurier));
-        System.out.println(order.getTotalCost(new CostCalculator(), IShippingMethod.FanCurier));
-        System.out.println(order.getTotalCost(new CostCalculator(), IShippingMethod.UgerntCargus));
-        System.out.println(order.getTotalCost(new CostCalculator(), IShippingMethod.SameDay));
+        System.out.println(order.getTotalCost(new FanCurierCostMethod()));
+        System.out.println(order.getTotalCost(new UrgentCargusCostMethod()));
+        System.out.println(order.getTotalCost(new SamedayCostMethod()));
     }
 }
